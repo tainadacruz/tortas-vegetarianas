@@ -1,3 +1,4 @@
+%Predicados de cada coluna
 camiseta(amarela).
 camiseta(azul).
 camiseta(branca).
@@ -50,9 +51,11 @@ aDireita(X,Y,Lista) :- aEsquerda(Y,X,Lista).
 noCanto(X,Lista) :- last(Lista,X).
 noCanto(X,[X|_]).
 
+%X está entre Y e Z, nessa ordem
 entre(X, Y, Z, Lista) :- aEsquerda(X, Z, Lista),
                          aDireita(X, Y, Lista).
 
+%Todos os elementos da lista devem ser diferentes
 todosDiferentes([]).
 todosDiferentes([H|T]) :- not(member(H,T)), todosDiferentes(T).
 
@@ -146,4 +149,5 @@ solucao(ListaSolucao) :-
     idade(Idade1), idade(Idade2), idade(Idade3), idade(Idade4), idade(Idade5),
     todosDiferentes([Idade1, Idade2, Idade3, Idade4, Idade5]),
 
+    %Mostra o resultado, inserindo quebras na linha após cada amiga
     maplist(writeln, ListaSolucao).
