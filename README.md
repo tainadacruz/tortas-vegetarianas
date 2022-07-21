@@ -29,4 +29,4 @@ Em uma das pontas está a amiga que está bebendo suco de Maçã.
 
 ## Execução
 
-No terminal: ``` solucao(ListaSolucao). ```
+No terminal, após compilar: ``` solucao(ListaSolucao). ```
